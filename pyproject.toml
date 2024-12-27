@@ -4,4 +4,19 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.10"
-dependencies = []
+dependencies = [
+    "jupyter>=1.1.1",
+    "keras>=2.14.0",
+    "matplotlib>=3.10.0",
+    "pandas>=2.2.3",
+    "pip>=24.3.1",
+    "scipy>=1.14.1",
+    "tensorflow-macos>=2.14.1",
+    "tensorflow>=2.14.0",
+    "pytoml>=0.1.21",
+    "frozendict>=2.4.6",
+    "seaborn>=0.13.2",
+]
+
+[tool.uv.sources]
+kaggle-clothing-attributes = { workspace = true }

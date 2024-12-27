@@ -9,6 +9,8 @@ wheels/
 # Virtual environments
 .venv
 
-# Data and artifacts
+# Data and other artifacts
 data/
 artifacts/
+logs/
+.ipynb_checkpoints/

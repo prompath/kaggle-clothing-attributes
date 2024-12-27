@@ -1,0 +1,6 @@
+[dataset]
+images_dir = "../data/raw/images"
+labels_dir = "../data/raw/labels"
+
+[logging]
+log_dir = "../logs"
