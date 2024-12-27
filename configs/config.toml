@@ -2,5 +2,8 @@
 images_dir = "../data/raw/images"
 labels_dir = "../data/raw/labels"
 
+[artifacts]
+labels_path = "../data/preprocessed/labels.csv"
+
 [logging]
 log_dir = "../logs"

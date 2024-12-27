@@ -35,6 +35,9 @@ labels_df.head()
 print(f"Shape of the label dataframe: {labels_df.shape}")
 
 # %%
+# labels_df.to_csv(CONFIG["artifacts"]["labels_path"])
+
+# %%
 # Let's check the number of the original image.
 images = sorted(list((images_dir).glob("*.jpg")))  # Glob doesn't sort by file name.
 print(f"Number of images: {len(images)}")
