@@ -57,4 +57,4 @@ def load_image(image_path):
         A 3D TensorFlow tensor representing the decoded JPEG image.
     """
     image = tf.io.read_file(image_path)
-    return tf.image.decode_jpeg(image, channels=3)
+    return tf.io.decode_jpeg(image, channels=3)
