@@ -91,6 +91,8 @@ test_dataset = test_dataset.map(lambda x, y: (load_image(x), y))
 # %%
 for sample in train_dataset.take(1):
     print(f"Data type of x: {type(sample[0])}")
+    print(f"Shape of x: {sample[0].shape}")
     print(f"Data type of y: {type(sample[1])}")
+    print(f"Shape of y: {sample[1].shape}")
     plt.imshow(sample[0])
     plt.axis("off")

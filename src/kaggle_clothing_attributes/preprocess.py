@@ -46,7 +46,8 @@ def load_labels_from_directory(labels_dir: str) -> pd.DataFrame:
     return label_df
 
 
-def load_image(image_path):
+@tf.function
+def load_image(image_path: str, target_size: tuple = None):
     """
     Load an image from a given path and return it as a TensorFlow tensor.
 
@@ -57,4 +58,7 @@ def load_image(image_path):
         A 3D TensorFlow tensor representing the decoded JPEG image.
     """
     image = tf.io.read_file(image_path)
-    return tf.io.decode_jpeg(image, channels=3)
+    image = tf.io.decode_jpeg(image, channels=3)
+    if target_size:
+        image = tf.image.resize(image, target_size, method="nearest")
+    return image
