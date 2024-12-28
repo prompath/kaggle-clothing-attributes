@@ -35,7 +35,7 @@ labels_df.head()
 print(f"Shape of the label dataframe: {labels_df.shape}")
 
 # %%
-# labels_df.to_csv(CONFIG["artifacts"]["labels_path"])
+labels_df.to_csv(CONFIG["artifacts"]["labels_path"])
 
 # %%
 # Let's check the number of the original image.

@@ -1,9 +1,17 @@
 [dataset]
 images_dir = "../data/raw/images"
 labels_dir = "../data/raw/labels"
+train_path = "../data/processed/train_records"
+validation_path = "../data/processed/validation_records"
+test_path = "../data/processed/test_records"
 
 [artifacts]
-labels_path = "../data/preprocessed/labels.csv"
+labels_path = "../data/processed/labels.csv"
 
 [logging]
 log_dir = "../logs"
+
+[run]
+seed = 42
+train_size = 0.7
+validation_size = 0.15

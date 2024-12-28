@@ -7,6 +7,7 @@ from pathlib import Path
 
 import pandas as pd
 import scipy.io as sio
+import tensorflow as tf
 
 from .config import load_config
 
@@ -43,3 +44,17 @@ def load_labels_from_directory(labels_dir: str) -> pd.DataFrame:
     label_df = label_df.astype("Int8")
     logger.info("Casted the data type of the dataframe to Int8")
     return label_df
+
+
+def load_image(image_path):
+    """
+    Load an image from a given path and return it as a TensorFlow tensor.
+
+    Args:
+        image_path: The file path of the image to be loaded.
+
+    Returns:
+        A 3D TensorFlow tensor representing the decoded JPEG image.
+    """
+    image = tf.io.read_file(image_path)
+    return tf.image.decode_jpeg(image, channels=3)
